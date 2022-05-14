@@ -16,3 +16,16 @@ for(const link of links) {
     nav.classList.remove('show');
   })
 }
+
+//Add 'scroll' class on scroll down
+const header = document.querySelector("#header");
+
+window.addEventListener("scroll", function() {
+  if(scrollY > 0) {
+    header.classList.add("scroll")
+  } else {
+    header.classList.remove("scroll")
+  }
+})
+
+console.log(scrollY)
