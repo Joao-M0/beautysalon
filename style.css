@@ -112,6 +112,15 @@ p {
 .section .title {
   margin-bottom: 1.6rem;
 }
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--primary-color);
+}
+
+
 
 
 /****** LAYOUT ******/
@@ -319,3 +328,39 @@ nav.show .icon-close {
 #about .text p {
   margin-bottom: 3.2rem;
 }
+
+
+
+/****** SERVICES ******/
+#services header p {
+  color: var(--dark-color);
+}
+
+#services .icons {
+  color: var(--primary-color);
+  font-size: 8rem;
+
+  margin-bottom: 2.4rem;
+}
+
+#services .cards.grid {
+  gap: 2.4rem;
+}
+
+#services .card {
+  padding: 5.8rem 3.2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+
+  border-bottom: .4rem solid var(--primary-color);
+  border-radius: .4rem .4rem 0 0;
+  /*border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;*/
+
+  text-align: center;
+}
+
+#services .card .title {
+  font-size: 2.4rem;
+}
+
+
