@@ -28,6 +28,7 @@ ul {
   --dark-color: hsl(var(--hue), 41%, 10%);
   --text-color: hsl(0, 0%, 46%);
   --bg-color: hsl(0, 0%, 98%);
+  --bg-color-second: hsl(0, 0%, 100%);
   --line-color: hsl(0, 0%, 89%);
 
   --font: "Poppins", sans-serif;
@@ -83,8 +84,15 @@ p {
 .line-one {
   height: 1px;
   background: linear-gradient(270deg, 
-  var(--primary-color) 0%, 
-  rgba(204, 244, 230, 0.34) 100%);
+  var(--primary-color), 
+  rgba(204, 244, 230, 0.34));
+}
+
+.line-two {
+  height: 1px;
+  background: linear-gradient(270deg, 
+  rgba(204, 244, 230, 0.34), 
+  var(--primary-color));
 }
 
 .container {
@@ -101,6 +109,9 @@ p {
   padding: 8rem 0;
 }
 
+.section .title {
+  margin-bottom: 1.6rem;
+}
 
 
 /****** LAYOUT ******/
@@ -263,10 +274,48 @@ nav.show .icon-close {
   text-align: center;
 }
 
-#home .text h1 {
-  margin-bottom: 1.6rem;
+#home .text p {
+  margin-bottom: 3.2rem;
 }
 
-#home .text p {
+
+/****** ABOUT ******/
+#about {
+  background-color: var(--bg-color-second);
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--second-color);
+  position: absolute;
+  top: -8%;
+  left: -33%;
+  z-index: 0;
+
+  border-radius: .4rem;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .text {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+
+  text-align: justify;
+}
+
+#about .text p {
   margin-bottom: 3.2rem;
 }
