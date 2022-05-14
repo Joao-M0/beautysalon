@@ -204,6 +204,26 @@ nav.show ul.grid{
   gap: 6.4rem;
 }
 
+/* TOGGLE MENU */
+.toggle {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  right: 2.4rem;
+}
+
+nav.show .icon-close {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /****** HOME ******/
 #home {
