@@ -117,7 +117,7 @@ p {
   margin-bottom: 1.6rem;
 }
 .section header {
-  margin-bottom: 4rem;
+  margin-bottom: 6.4rem;
 }
 
 .section header strong {
@@ -169,7 +169,6 @@ p {
 
 #header.scroll nav ul li a:hover {
   color: var(--dark-color);
-  filter: brightness(2.8);
 }
 
 #header.scroll nav ul li a::after {
