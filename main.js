@@ -17,16 +17,16 @@ for(const link of links) {
   })
 }
 
-//Add 'scroll' class on scroll down
-const header = document.querySelector("#header");
+function changeHeaderWhenScroll() {
+  //Add 'scroll' class on scroll down
+  const header = document.querySelector("#header");
 
-window.addEventListener("scroll", function() {
   if(scrollY > 0) {
     header.classList.add("scroll")
   } else {
     header.classList.remove("scroll")
   }
-})
+}
 
 //Testimonials carousel slider swiper
 const swiper = new Swiper('.swiper', {
@@ -36,6 +36,12 @@ const swiper = new Swiper('.swiper', {
   },
   mousewheel: true,
   keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 });
 
 //ScrollReveal
@@ -48,15 +54,23 @@ ScrollReveal({
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links,
+  #contact .links, #contact .text,
   footer .brand, footer .social-links`, {interval: 100})
 
-//Back To Top
-const backToTopButton = document.querySelector('.back-to-top');
-window.addEventListener('scroll', function() {
+
+function backToTop() {
+  //Back To Top
+  const backToTopButton = document.querySelector('.back-to-top');
+
   if(scrollY >= 1000) {
     backToTopButton.classList.add("show")
   }else {
     backToTopButton.classList.remove("show")
   }
+}
+
+//When Scroll
+window.addEventListener("scroll", function() {
+  changeHeaderWhenScroll();
+  backToTop();
 })
