@@ -530,6 +530,12 @@ footer .brand p {
 
 footer .social-links a{
   margin-right: 3.2rem;
+  transition: 300ms;
+  display: inline-block;
+}
+
+footer .social-links a:hover {
+  transform: translateY(-10px);
 }
 
 footer .social-links i{
@@ -537,6 +543,32 @@ footer .social-links i{
   font-weight: normal;
   color: var(--bg-color-second);
 
+}
+
+/* ------Back To Top------ */
+.back-to-top {
+  font-size: 1.8rem;
+  color: var(--bg-color-second);
+  background-color: var(--primary-color);
+
+  position: fixed;
+  right: 1.6rem;
+  bottom: 1.6rem;
+
+  padding: 1.2rem;
+  clip-path: circle();
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateX(100%);
+  transition: 400ms;
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Swiper */

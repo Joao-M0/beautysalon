@@ -48,4 +48,15 @@ ScrollReveal({
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`, {interval: 100})
+  #contact .text, #contact .links,
+  footer .brand, footer .social-links`, {interval: 100})
+
+//Back To Top
+const backToTopButton = document.querySelector('.back-to-top');
+window.addEventListener('scroll', function() {
+  if(scrollY >= 1000) {
+    backToTopButton.classList.add("show")
+  }else {
+    backToTopButton.classList.remove("show")
+  }
+})
