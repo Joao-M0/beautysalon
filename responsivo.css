@@ -37,6 +37,10 @@
     font-size: 1.6rem;
   }
 
+  nav .menu li a.title.active {
+    font-weight: bold;
+  }
+
   nav .icon-menu {
     display: none;
   }

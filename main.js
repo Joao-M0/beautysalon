@@ -17,9 +17,9 @@ for(const link of links) {
   })
 }
 
+//Add 'scroll' class on scroll down
+const header = document.querySelector("#header");
 function changeHeaderWhenScroll() {
-  //Add 'scroll' class on scroll down
-  const header = document.querySelector("#header");
 
   if(scrollY > 0) {
     header.classList.add("scroll")
@@ -57,10 +57,9 @@ ScrollReveal({
   #contact .links, #contact .text,
   footer .brand, footer .social-links`, {interval: 100})
 
-
+//Back To Top
+const backToTopButton = document.querySelector('.back-to-top');
 function backToTop() {
-  //Back To Top
-  const backToTopButton = document.querySelector('.back-to-top');
 
   if(scrollY >= 1000) {
     backToTopButton.classList.add("show")
@@ -69,8 +68,30 @@ function backToTop() {
   }
 }
 
+//Active menu when in section
+const sections = document.querySelectorAll('main section[id]');
+function activeMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
+
+  for(const section of sections) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    const checkpointStart = checkpoint >= sectionTop;
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+
+    if (checkpointStart && checkpointEnd) {
+      document.querySelector(`a[href*=${sectionId}]`).classList.add('active');
+    } else {
+      document.querySelector(`a[href*=${sectionId}]`).classList.remove('active');
+    }
+  }
+}
+
 //When Scroll
 window.addEventListener("scroll", function() {
   changeHeaderWhenScroll();
   backToTop();
+  activeMenuAtCurrentSection();
 })
