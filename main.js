@@ -48,4 +48,4 @@ ScrollReveal({
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .social-links`, {interval: 100})
+  #contact .text, #contact .links`, {interval: 100})
