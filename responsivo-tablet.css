@@ -1,0 +1,50 @@
+@media screen and (min-width: 768px) {
+
+  .section {
+    padding: calc(16rem + var(--nav-height)) 0;
+  }
+
+  #home .image,
+  #about .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  #home .image::before {
+    width: 75%;
+  }
+
+  #home .image img,
+  #about .image img {
+    width: 70%;
+  }
+
+  #about .image::before {
+    width: 75%;
+
+  }
+
+  #services .cards,
+  #testimonials .swiper {
+    margin-inline: 5rem;
+  }
+
+  #testimonials .container {
+    margin-inline: 2.4rem;
+  }
+
+  #testimonials header h2{
+    text-align: center;
+  }
+
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  footer  .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -37,7 +37,7 @@ const swiper = new Swiper('.swiper', {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    767: {
+    1024: {
       slidesPerView: 2,
       setWrapperSize: true
     }
@@ -48,14 +48,13 @@ const swiper = new Swiper('.swiper', {
 ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 500,
-  reset: true
+  duration: 500
 }).reveal(`#home .image, #home .text,
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
   #contact .links, #contact .text,
-  footer .brand, footer .social-links`, {interval: 100})
+  footer .brand, footer .social-links`)
 
 //Back To Top
 const backToTopButton = document.querySelector('.back-to-top');

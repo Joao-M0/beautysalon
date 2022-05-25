@@ -1,10 +1,15 @@
-@media (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  :root {
+    --title-font-size: 3.6rem;
+    --subtitle-font-size: 1.8rem;
+  }
+
   #header.scroll .menu {
     background-color: initial;
   }
   
   .container {
-    max-width: 1120px;
+    width: min(97rem, 100%);
     margin-left: auto;
     margin-right: auto;
   }
@@ -54,10 +59,6 @@
     order: 1;
   }
 
-  #home .image img {
-    right: 0;
-  }
-
   #home .text {
     order: 0;
     text-align: left;
@@ -69,6 +70,10 @@
   #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
+  }
+
+  #about .image {
+    height: 25.4rem;
   }
 
   #services .cards {
@@ -105,9 +110,3 @@
   }
 }
 
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 3.6rem;
-    --subtitle-font-size: 1.8rem;
-  }
-}

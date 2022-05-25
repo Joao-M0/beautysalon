@@ -267,7 +267,7 @@ nav.show .menu {
   display: grid;
   place-content: center;
 }
-
+wi
 nav.show ul.grid{
   gap: 6.4rem;
 }
@@ -325,7 +325,7 @@ nav.show .icon-close {
 
 #home .image img {
   position: relative;
-  right: 4.7rem;
+  right: 2.7rem;
 }
 
 #home .text {
@@ -355,12 +355,12 @@ nav.show .icon-close {
 
 #about .image::before {
   content: "";
-  height: 65%;
+  height: 100%;
   width: 100%;
   background-color: var(--second-color);
   position: absolute;
-  top: -8%;
-  left: -33%;
+  top: -8.4%;
+  left: -25.2%;
   z-index: 0;
 
   border-radius: .4rem;
